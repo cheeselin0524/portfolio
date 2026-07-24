@@ -10,14 +10,13 @@
         body {
             font-family: 'Noto Sans KR', sans-serif;
         }
-        /* 커스텀 스타일 */
         .bg-brand-deep { background-color: #0a1930; }
         .text-brand-blue { color: #007bff; }
         .border-brand-blue { border-color: #007bff; }
         .project-card img {
             width: 100%;
-            height: 200px; /* 고정 높이 */
-            object-fit: cover; /* 이미지 비율 유지하며 꽉 채우기 */
+            height: 200px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -42,11 +41,10 @@
     <!-- 메인 컨텐츠 -->
     <main class="max-w-7xl mx-auto px-6 py-12 md:py-20 space-y-24">
         
-        <!-- 1. 히어로 섹션 (사진 교체 완료) -->
+        <!-- 1. 히어로 섹션 (증명사진 교체 완료) -->
         <section id="about" class="grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-5 flex justify-center">
                 <div class="relative w-80 h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                    <!-- 사진 파일 이름 참조: 고화질.JPG (실제 파일명은 서버 업로드시 영문 권장) -->
                     <img src="https://i.postimg.cc/j5Y1LgqM/photo.jpg" alt="林志玲 프로필 사진" class="w-full h-full object-cover">
                     <div class="absolute bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
@@ -57,14 +55,10 @@
                 <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">E-Commerce · Global Game Publishing</span>
                 <h1 class="text-5xl font-extrabold text-brand-deep leading-tight">
                     글로벌 오퍼레이션 & 마케팅<br/>
-                    <span class="text-blue-600">스페셜리스트</span>林志玲 (Lin Zhiling)
+                    <span class="text-blue-600">스페셜리스트</span> 林志玲 (Lin Zhiling)
                 </h1>
                 <p class="text-lg text-gray-600 max-w-2xl">
-                    안녕하세요.
-                    데이터 분석과 로컬라이제이션 역량을 바탕으로, 이커머스 및 글로벌 게임
-                    시장에서 비즈니스 성장을 이끌어내는 멀티플레이너林志玲입니다.
-                    숫자 뒤의 사람을 이해하고, 성과로 증명하는 일을 좋아합니다.
-                    감사합니다.
+                    안녕하세요. 데이터 분석과 로컬라이제이션 역량을 바탕으로, 이커머스 및 글로벌 게임 시장에서 비즈니스 성장을 이끌어내는 멀티플레이어 林志玲입니다. 숫자 뒤의 사람을 이해하고, 성과로 증명하는 일을 좋아합니다. 감사합니다.
                 </p>
                 <div class="flex space-x-4 pt-4">
                     <a href="#experience" class="bg-brand-deep text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition">프로젝트 살펴보기</a>
@@ -73,14 +67,13 @@
             </div>
         </section>
 
-        <!-- 2. 핵심 역량 (Core Competencies) - 한/영 병기 수정 완료 -->
+        <!-- 2. 핵심 역량 (Core Competencies) - 한글 제목 + 영어 괄호 -->
         <section id="core" class="space-y-12">
             <div class="text-center max-w-2xl mx-auto">
                 <h2 class="text-3xl font-bold text-brand-deep">핵심 역량</h2>
-                <p class="mt-4 text-gray-600">다양한 글로벌 프로젝트를 성공으로 이끈林志玲만의 전문성입니다.</p>
+                <p class="mt-4 text-gray-600">다양한 글로벌 프로젝트를 성공으로 이끈 林志玲만의 전문성입니다.</p>
             </div>
             <div class="grid md:grid-cols-4 gap-8">
-                <!-- 카드 1 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-blue space-y-4">
                     <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
@@ -88,7 +81,6 @@
                     <h3 class="text-xl font-bold text-brand-deep">이커머스 및 소싱 <span class="text-sm font-normal text-gray-500">(E-Commerce & Sourcing)</span></h3>
                     <p class="text-gray-600 text-sm">글로벌 트렌드 분석 기반의 상품 기획 및 데이터 기반 소싱 전략 수립.</p>
                 </div>
-                <!-- 카드 2 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-green-500 space-y-4">
                     <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11h5a2 2 0 011.994 1.84l.853 10.66h5.388l.853-10.66A2 2 0 0119.945 11h5a2 2 0 011.994 1.84l.853 10.66h5.388l.853-10.66A2 2 0 0121.055 9h-5a2 2 0 01-1.994-1.84l-.853-10.66H9.325l-.853 10.66A2 2 0 016.055 9h-5a2 2 0 01-1.994 1.84l.853 10.66h5.388l.853-10.66A2 2 0 013.055 11z"></path></svg>
@@ -96,26 +88,24 @@
                     <h3 class="text-xl font-bold text-brand-deep">글로벌 게임 퍼블리싱 <span class="text-sm font-normal text-gray-500">(Global Game Publishing)</span></h3>
                     <p class="text-gray-600 text-sm">타겟 국가별 시장 이해도를 바탕으로 한 성공적인 런칭 및 라이브 서비스.</p>
                 </div>
-                <!-- 카드 3 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-yellow-500 space-y-4">
                     <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center text-yellow-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-brand-deep">데이터 분석 및 성과 최적화 <span class="text-sm font-normal text-gray-500">(Data Analysis & Optimization)</span></h3>
+                    <h3 class="text-xl font-bold text-brand-deep">데이터 분석 및 최적화 <span class="text-sm font-normal text-gray-500">(Data Analysis & Optimization)</span></h3>
                     <p class="text-gray-600 text-sm">유저 행동 데이터 기반의 인사이트 도출 및 지표 개선(Retention, LTV).</p>
                 </div>
-                <!-- 카드 4 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-500 space-y-4">
                     <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                     </div>
                     <h3 class="text-xl font-bold text-brand-deep">크로스보더 커뮤니케이션 <span class="text-sm font-normal text-gray-500">(Cross-border Communication)</span></h3>
-                    <p class="text-gray-600 text-sm">원어민 수준의 한국어/중국어 능력을 활용한 유관 부서 및 파트너사와의 원활한 협업.</p>
+                    <p class="text-gray-600 text-sm">원어민 수준의 한국어/중국어 능력을 활용한 유관 부서 및 파트너사 협업.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 3. 경력 사항 (Experience & Projects) - 수정 완료 -->
+        <!-- 3. 경력 사항 (Experience & Projects) - 영어 제거 및 37互娱下属中文说明 + 4张照片卡片 -->
         <section id="experience" class="space-y-16">
             <div class="text-center max-w-2xl mx-auto">
                 <h2 class="text-3xl font-bold text-brand-deep">경력 사항</h2>
@@ -126,21 +116,66 @@
             <div class="grid md:grid-cols-12 gap-8 bg-white p-8 rounded-3xl shadow-lg">
                 <div class="md:col-span-4 space-y-2">
                     <div class="text-sm text-blue-600 font-semibold">2019.07 – 2021.12</div>
-                    <h3 class="text-2xl font-bold text-brand-deep">E-Commerce · Global Game Publishing</h3>
+                    <h3 class="text-2xl font-bold text-brand-deep">회사명 1</h3>
                     <div class="text-gray-600">Global Operations & Marketing Specialist</div>
                     <div class="text-sm text-gray-500 italic">Seoul, Korea</div>
                 </div>
                 <div class="md:col-span-8 text-gray-700 space-y-6 leading-relaxed">
-                    <p>
-                        안녕하세요. 데이터 분석과 로컬라이제이션 역량을 바탕으로, 이커머스 및 글로벌 게임
-                        시장에서 비즈니스 성장을 이끌어내는 멀티플레이너林志玲입니다.
-                        숫자 뒤의 사람을 이해하고, 성과로 증명하는 일을 좋아합니다.
-                        감사합니다.
-                    </p>
+                    <p>글로벌 오퍼레이션 및 마케팅 전략 수립 및 실행 경험.</p>
                     
-                    <!-- 프로젝트 1 -->
+                    <!-- 프로젝트 사진 1 -->
                     <div class="project-card border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-                        <!-- 여기에 사진을 넣어주세요 -->
-                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop" alt="프로젝트1 스크린샷">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop" alt="프로젝트 1 사진">
                         <div class="p-6 space-y-3">
-                            <div class="font-bold text-brand-deep text-lg">신규 모바일 RPG 글로벌 런
+                            <div class="font-bold text-brand-deep text-lg">프로젝트 1 명칭</div>
+                            <p class="text-gray-600 text-sm">프로젝트 상세 설명 및 성과 내용 입력</p>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 사진 2 -->
+                    <div class="project-card border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="프로젝트 2 사진">
+                        <div class="p-6 space-y-3">
+                            <div class="font-bold text-brand-deep text-lg">프로젝트 2 명칭</div>
+                            <p class="text-gray-600 text-sm">프로젝트 상세 설명 및 성과 내용 입력</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 경력 2 (37互娱) -->
+            <div class="grid md:grid-cols-12 gap-8 bg-white p-8 rounded-3xl shadow-lg">
+                <div class="md:col-span-4 space-y-2">
+                    <div class="text-sm text-blue-600 font-semibold">근무 기간</div>
+                    <h3 class="text-2xl font-bold text-brand-deep">37互娱</h3>
+                    <div class="text-gray-600">Guangzhou, China · 중국 게임 해외 매출 TOP3 퍼블리셔 프로젝트 경험</div>
+                    <div class="text-sm text-gray-500 italic">Guangzhou, China</div>
+                </div>
+                <div class="md:col-span-8 text-gray-700 space-y-6 leading-relaxed">
+                    <p>37互娱에서의 주요 업무 및 성과 내용 작성 영역.</p>
+                    
+                    <!-- 프로젝트 사진 3 -->
+                    <div class="project-card border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop" alt="프로젝트 3 사진">
+                        <div class="p-6 space-y-3">
+                            <div class="font-bold text-brand-deep text-lg">프로젝트 3 명칭</div>
+                            <p class="text-gray-600 text-sm">프로젝트 상세 설명 및 성과 내용 입력</p>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 사진 4 -->
+                    <div class="project-card border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="프로젝트 4 사진">
+                        <div class="p-6 space-y-3">
+                            <div class="font-bold text-brand-deep text-lg">프로젝트 4 명칭</div>
+                            <p class="text-gray-600 text-sm">프로젝트 상세 설명 및 성과 내용 입력</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
