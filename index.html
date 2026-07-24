@@ -1,0 +1,581 @@
+```html
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임다연 | Global Operations & Marketing Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgBase: '#FAFAFA',
+                        textMain: '#111111',
+                        textSub: '#666666',
+                        accent: '#3B41C5',
+                        cardBg: '#FFFFFF'
+                    },
+                    boxShadow: {
+                        card: '0 4px 20px rgba(0, 0, 0, 0.03)',
+                        cardHover: '0 12px 30px rgba(59, 65, 197, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts (Pretendard / Inter) -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: #FAFAFA;
+            color: #111111;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] text-[#111111] antialiased selection:bg-[#3B41C5] selection:text-white">
+
+    <!-- ① GNB (Navigation Bar) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#FAFAFA]/80 backdrop-blur-md border-b border-neutral-200/60 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#about" class="text-lg font-bold tracking-tight text-[#111111]">
+                DAYEON LIM <span class="text-[#3B41C5]">.PORTFOLIO</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-[#666666]">
+                <a href="#about" class="hover:text-[#3B41C5] transition-colors">About</a>
+                <a href="#competencies" class="hover:text-[#3B41C5] transition-colors">Core Competencies</a>
+                <a href="#experience" class="hover:text-[#3B41C5] transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-[#3B41C5] transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-[#3B41C5] transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-[#3B41C5] transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-[#3B41C5]/10 text-[#3B41C5]">
+                    KR / Global
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+
+        <!-- ② Hero Section -->
+        <section id="about" class="min-h-[85vh] flex flex-col justify-center py-12 reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left: Title & Intro -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-md bg-neutral-200/60 text-xs font-semibold tracking-wide uppercase text-neutral-800">
+                        <span>Global Operations & Marketing Specialist</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#111111] leading-[1.15]">
+                        데이터와 로컬라이즈로<br>
+                        <span class="text-[#3B41C5]">비즈니스 성장을 견인</span>합니다.
+                    </h1>
+                    <p class="text-lg text-[#666666] leading-relaxed max-w-2xl">
+                        "데이터 분석과 로컬라이제이션 역량을 바탕으로, 이커머스와 글로벌 게임 시장에서 비즈니스 성장을 이끌어내는 멀티플레이어 임다연입니다."
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a href="#projects" class="px-7 py-3.5 rounded-xl bg-[#3B41C5] text-white font-semibold text-sm shadow-lg shadow-[#3B41C5]/20 hover:bg-[#3237a8] transition-all transform hover:-translate-y-0.5">
+                            프로젝트 보기
+                        </a>
+                        <a href="#contact" class="px-7 py-3.5 rounded-xl bg-white text-[#111111] border border-neutral-300 font-semibold text-sm hover:border-[#3B41C5] transition-all">
+                            연락하기
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Profile Card (인적사항) -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white rounded-2xl p-8 shadow-card border border-neutral-100 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#3B41C5]/5 rounded-bl-full pointer-events-none"></div>
+                        <h3 class="text-xl font-bold text-[#111111] mb-6 pb-4 border-b border-neutral-100 flex items-center justify-between">
+                            <span>인적사항</span>
+                            <span class="text-xs font-normal text-[#3B41C5] bg-[#3B41C5]/10 px-2.5 py-1 rounded-full">Profile</span>
+                        </h3>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex justify-between items-center">
+                                <span class="text-[#666666] font-medium">이름 (Name)</span>
+                                <span class="font-bold text-[#111111]">임다연 (林多延)</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-[#666666] font-medium">생년월일 (Birth)</span>
+                                <span class="font-semibold text-[#111111]">1999년 05월 24일</span>
+                            </li>
+                            <li class="flex justify-col sm:flex-row justify-between items-start sm:items-center gap-1">
+                                <span class="text-[#666666] font-medium">학력 (Education)</span>
+                                <span class="font-semibold text-[#111111] text-right">고려대학교 서어서문학·GKS 학사<br><span class="text-xs text-[#666666] font-normal">(2017.09 ~ 2021.12)</span></span>
+                            </li>
+                            <li class="flex justify-between items-center pt-2 border-t border-neutral-100">
+                                <span class="text-[#666666] font-medium">비자 (Visa)</span>
+                                <span class="font-bold text-[#3B41C5] bg-[#3B41C5]/10 px-2 py-0.5 rounded text-xs">중국 F-4 비자</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ③ Core Competencies (核心能力矩阵) -->
+        <section id="competencies" class="py-20 reveal">
+            <div class="mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#3B41C5] mb-2 block">Core Competencies</span>
+                <h2 class="text-3xl font-extrabold tracking-tight text-[#111111]">핵심 역량 매트릭스</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-neutral-100 hover:shadow-cardHover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-[#3B41C5]/10 flex items-center justify-center text-[#3B41C5] font-bold text-lg mb-6">01</div>
+                    <h3 class="text-xl font-bold text-[#111111] mb-3">E-Commerce & Sourcing</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">
+                        상품 소싱, 공급망 관리(SCM), 상세페이지 최적화 및 라이브 커머스 기획·실무 전반을 아우르는 이커머스 실전 운영 역량 보유.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-neutral-100 hover:shadow-cardHover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-[#3B41C5]/10 flex items-center justify-center text-[#3B41C5] font-bold text-lg mb-6">02</div>
+                    <h3 class="text-xl font-bold text-[#111111] mb-3">Global User Operation & VIP Care</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">
+                        한국 시장 타겟 맞춤형 고가치 유저(VIP) 리텐션, 락인(Lock-in) 전략 수립 및 체계적인 커뮤니케이션 프로세스 구축.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-neutral-100 hover:shadow-cardHover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-[#3B41C5]/10 flex items-center justify-center text-[#3B41C5] font-bold text-lg mb-6">03</div>
+                    <h3 class="text-xl font-bold text-[#111111] mb-3">Data-Driven Marketing & Promotion</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">
+                        0 to 1 채널 구축, 대형 프로모션(618, 광군제, 웹상점 이벤트) 기획을 통한 지표 개선 및 폭발적인 매출 성과 창출.
+                    </p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-neutral-100 hover:shadow-cardHover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-[#3B41C5]/10 flex items-center justify-center text-[#3B41C5] font-bold text-lg mb-6">04</div>
+                    <h3 class="text-xl font-bold text-[#111111] mb-3">Cross-Cultural Communication</h3>
+                    <p class="text-sm text-[#666666] leading-relaxed">
+                        한국어(TOPIK 6급) 및 영어(TOEIC 760) 기반의 원활한 글로벌 협업, 현지화 감각 및 메이커-유저 가교 역할 수행.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ④ Experience (경력 사항) -->
+        <section id="experience" class="py-20 reveal">
+            <div class="mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#3B41C5] mb-2 block">Experience Timeline</span>
+                <h2 class="text-3xl font-extrabold tracking-tight text-[#111111]">경력 사항</h2>
+            </div>
+            <div class="space-y-6">
+                <!-- Exp 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-neutral-100 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="space-y-2">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#3B41C5]/10 text-[#3B41C5]">2024.08 ~ 2025.11</span>
+                        <h3 class="text-xl font-bold text-[#111111]">샤오홍슈·도우인 개인 커머스 마켓 창업</h3>
+                        <p class="text-sm font-medium text-[#666666]">이커머스 셀러 (E-commerce Seller)</p>
+                    </div>
+                    <div class="text-sm text-[#666666] max-w-md leading-relaxed">
+                        상품 사입, 공급업체 소싱 및 제조사 관리, SNS 계정 운영, 라이브 커머스 기획 및 데이터 모니터링 총괄.
+                    </div>
+                </div>
+                <!-- Exp 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-neutral-100 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="space-y-2">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#3B41C5]/10 text-[#3B41C5]">2022.02 ~ 2024.04</span>
+                        <h3 class="text-xl font-bold text-[#111111]">37 Interactive Entertainment (三七互娱)</h3>
+                        <p class="text-sm font-medium text-[#666666]">한국 시장 유저 운영 및 마케터 (정규직)</p>
+                    </div>
+                    <div class="text-sm text-[#666666] max-w-md leading-relaxed">
+                        고가치 유저(VIP) 운영 및 관계 관리, 공식 결제 채널 프로모션 0→1 구축, 유저 피드백 분석 및 부서 협업.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⑤ Project Experience (项目经历模块 - STAR法则折叠交互) -->
+        <section id="projects" class="py-20 reveal">
+            <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#3B41C5] mb-2 block">Project Showcase</span>
+                    <h2 class="text-3xl font-extrabold tracking-tight text-[#111111]">프로젝트 경력 (STAR 분석)</h2>
+                </div>
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2" id="project-filters">
+                    <button onclick="filterProjects('all')" class="px-4 py-2 rounded-lg text-xs font-semibold bg-[#3B41C5] text-white transition-all filter-btn active">전체 보기</button>
+                    <button onclick="filterProjects('ecommerce')" class="px-4 py-2 rounded-lg text-xs font-semibold bg-white text-[#666666] border border-neutral-200 hover:border-[#3B41C5] transition-all filter-btn">이커머스</button>
+                    <button onclick="filterProjects('game')" class="px-4 py-2 rounded-lg text-xs font-semibold bg-white text-[#666666] border border-neutral-200 hover:border-[#3B41C5] transition-all filter-btn">게임 퍼블리싱</button>
+                </div>
+            </div>
+
+            <!-- Project Cards Container -->
+            <div class="space-y-6" id="project-list">
+
+                <!-- Project 1 (E-commerce) -->
+                <div class="project-card bg-white rounded-2xl shadow-card border border-neutral-100 overflow-hidden transition-all duration-300 hover:shadow-cardHover" data-category="ecommerce">
+                    <div class="p-8 cursor-pointer select-none flex flex-col md:flex-row md:items-center justify-between gap-4" onclick="toggleAccordion(this)">
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <span class="px-2.5 py-1 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-600">이커머스 / 셀러</span>
+                                <span class="text-xs text-[#666666]">2024.08 ~ 2025.11</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#111111]">샤오홍슈·도우인 개인 커머스 마켓 총괄 및 운영</h3>
+                            <p class="text-sm text-[#666666]">도우인(抖音) 및 샤오홍슈(小红书) 계정(`cheesefairy`) 단독 운영 및 라이브 커머스 기획</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-right hidden sm:block">
+                                <span class="block text-xs text-[#666666]">핵심 성과</span>
+                                <span class="text-sm font-bold text-[#3B41C5]">월 매출 6만 위안 / 팔로워 1.6만</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center transform transition-transform duration-300 accordion-arrow">
+                                <svg class="w-5 h-5 text-[#666666]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Content (STAR) -->
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-neutral-50/50 border-t border-neutral-100 px-8">
+                        <div class="py-6 space-y-4 text-sm text-[#666666]">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Situation (배경)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">급변하는 중국 이커머스 시장에서 개인 브랜드의 자생력을 확보하고 타겟 고객층에 도달할 신규 채널 개척 필요.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Task (과제)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">0에서 시작해 도우인·샤오홍슈 계정 활성화, 제품 소싱부터 마케팅, 라이브 방송까지 전 과정 독립 수행.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Action (행동)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">트렌드 기반 제품 발굴, 상세페이지 최적화, 숏폼 콘텐츠 제작, 대형 프로모션(618, 광군제) 전개 및 라이브 운영.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Result (성과)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">5개월만 팔로워 1만 명(누적 1.6만), 월 방문자 10% 개선, 최고 월 매출 <span class="font-bold text-[#3B41C5]">6만 위안(약 1,100만 원)</span> 기록.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Game) -->
+                <div class="project-card bg-white rounded-2xl shadow-card border border-neutral-100 overflow-hidden transition-all duration-300 hover:shadow-cardHover" data-category="game">
+                    <div class="p-8 cursor-pointer select-none flex flex-col md:flex-row md:items-center justify-between gap-4" onclick="toggleAccordion(this)">
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <span class="px-2.5 py-1 rounded text-xs font-semibold bg-indigo-500/10 text-[#3B41C5]">게임 퍼블리싱 / VIP 운영</span>
+                                <span class="text-xs text-[#666666]">2022.04 ~ 2023.09 (구글 매출 16위)</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#111111]">&lt;퍼즐 오브 Z (Puzzle of Z)&gt; 한국 지역 VIP 유저 운영 및 마케팅</h3>
+                            <p class="text-sm text-[#666666]">고가치 유저 관리 프로세스 구축, 결제 전환 유도 및 유저 커뮤니티 활성화</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-right hidden sm:block">
+                                <span class="block text-xs text-[#666666]">핵심 성과</span>
+                                <span class="text-sm font-bold text-[#3B41C5]">매출 2,500만 위안 (팀내 1위)</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center transform transition-transform duration-300 accordion-arrow">
+                                <svg class="w-5 h-5 text-[#666666]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Content (STAR) -->
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-neutral-50/50 border-t border-neutral-100 px-8">
+                        <div class="py-6 space-y-4 text-sm text-[#666666]">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Situation (배경)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">글로벌 흥행 게임의 한국 시장 안착 및 고가치 유저(VIP) 이탈 방지, 결제 전환 극대화 필요.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Task (과제)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">한국 지역 VIP 대상 전용 커뮤니케이션 프로세스를 구축하고 초기 접촉률을 높여 수익 창출 기여.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Action (행동)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">상황별 응대 가이드 및 메시지 템플릿 체계화, 유저 등급·활동 데이터 분석 기반 맞춤형 프로모션 진행.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Result (성과)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">핵심 유저 컨택률 <span class="font-bold text-[#3B41C5]">0% → 75% 달성</span>, 담당 채널 총매출 <span class="font-bold text-[#3B41C5]">2,500만 위안(약 47.5억 원, 팀 내 1위)</span> 달성.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 (Game) -->
+                <div class="project-card bg-white rounded-2xl shadow-card border border-neutral-100 overflow-hidden transition-all duration-300 hover:shadow-cardHover" data-category="game">
+                    <div class="p-8 cursor-pointer select-none flex flex-col md:flex-row md:items-center justify-between gap-4" onclick="toggleAccordion(this)">
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <span class="px-2.5 py-1 rounded text-xs font-semibold bg-indigo-500/10 text-[#3B41C5]">게임 퍼블리싱 / 웹상점</span>
+                                <span class="text-xs text-[#666666]">2022.08 ~ 2024.04 (구글 매출 TOP 25)</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#111111]">&lt;갑부: 장사의 시대&gt; 공식 웹 상점 0 to 1 구축 및 프로모션</h3>
+                            <p class="text-sm text-[#666666]">원스토어·갤럭시 스토어 분석 기반 공식 충전 채널 구축 및 로컬라이제이션 마케팅</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-right hidden sm:block">
+                                <span class="block text-xs text-[#666666]">핵심 성과</span>
+                                <span class="text-sm font-bold text-[#3B41C5]">누적 매출 5,000만 위안 (팀내 1위)</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center transform transition-transform duration-300 accordion-arrow">
+                                <svg class="w-5 h-5 text-[#666666]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Content (STAR) -->
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-neutral-50/50 border-t border-neutral-100 px-8">
+                        <div class="py-6 space-y-4 text-sm text-[#666666]">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Situation (배경)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">인게임 외 로컬 결제 채널을 활용한 독자적인 공식 충전 채널 활성화 및 고가치 유저 락인 필요.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Task (과제)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">원스토어·갤럭시 스토어 분석을 토대로 공식 웹 상점 프로모션을 기획·운영하고 결제 참여율 향상.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Action (행동)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">고가치 유저 대상 프로모션 0→1 구축, 월간 페이백 이벤트 및 멤버십 데이 충전 프로모션 전개.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Result (성과)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">누적 매출 <span class="font-bold text-[#3B41C5]">5,000만 위안(약 95억 원, 팀 내 1위)</span>, 컨택률 <span class="font-bold text-[#3B41C5]">80% 향상</span>, 공식 채널 비중 70% 유지.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Game) -->
+                <div class="project-card bg-white rounded-2xl shadow-card border border-neutral-100 overflow-hidden transition-all duration-300 hover:shadow-cardHover" data-category="game">
+                    <div class="p-8 cursor-pointer select-none flex flex-col md:flex-row md:items-center justify-between gap-4" onclick="toggleAccordion(this)">
+                        <div class="space-y-2">
+                            <div class="flex items-center space-x-3">
+                                <span class="px-2.5 py-1 rounded text-xs font-semibold bg-indigo-500/10 text-[#3B41C5]">게임 퍼블리싱 / 런칭 지원</span>
+                                <span class="text-xs text-[#666666]">2023.10 ~ 2024.04 (구글 매출 9위)</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#111111]">&lt;요괴 벌목꾼&gt; 사전 테스트 관리 및 초기 유저 온보딩 지원</h3>
+                            <p class="text-sm text-[#666666]">신작 출시 전 인게임 테스트 총괄, 유저 행동 데이터 수집 및 초기 적응 지원</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-right hidden sm:block">
+                                <span class="block text-xs text-[#666666]">핵심 성과</span>
+                                <span class="text-sm font-bold text-[#3B41C5]">구글 플레이스토어 매출 9위</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center transform transition-transform duration-300 accordion-arrow">
+                                <svg class="w-5 h-5 text-[#666666]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Content (STAR) -->
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-neutral-50/50 border-t border-neutral-100 px-8">
+                        <div class="py-6 space-y-4 text-sm text-[#666666]">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Situation (배경)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">신작 런칭 전후 유저 행동 데이터 수집과 초기 커뮤니티 반응 대응의 중요성 대두.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Task (과제)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">출시 전 인게임 테스트 관리 및 초기 유저 행동·커뮤니티 반응 분석 보고서 작성.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Action (행동)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">인게임 테스트 진행, 초기 유저 모니터링 보고서 작성, 고가치 유저 케어 및 설문조사 수행.</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-neutral-200/60">
+                                    <span class="font-bold text-[#3B41C5] block mb-1">Result (성과)</span>
+                                    <p class="text-xs leading-relaxed text-[#111111]">구글 플레이스토어 <span class="font-bold text-[#3B41C5]">최고 매출 9위 진입</span> 및 성공적인 초기 서비스 온보딩 안착 기여.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ⑥ Skills & Languages ( 보유 역량 및 언어) -->
+        <section id="skills" class="py-20 reveal">
+            <div class="mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#3B41C5] mb-2 block">Skills & Languages</span>
+                <h2 class="text-3xl font-extrabold tracking-tight text-[#111111]">보유 역량 및 언어</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Languages -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-neutral-100 space-y-6">
+                    <h3 class="text-lg font-bold text-[#111111] pb-3 border-b border-neutral-100">언어 능력 (Language)</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-semibold text-[#111111]">한국어 (Korean)</span>
+                                <span class="text-[#3B41C5] font-bold">TOPIK 6급 (원어민 수준)</span>
+                            </div>
+                            <div class="w-full bg-neutral-100 h-2 rounded-full overflow-hidden"><div class="bg-[#3B41C5] h-full rounded-full" style="width: 100%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-semibold text-[#111111]">영어 (English)</span>
+                                <span class="text-[#3B41C5] font-bold">TOEIC 760</span>
+                            </div>
+                            <div class="w-full bg-neutral-100 h-2 rounded-full overflow-hidden"><div class="bg-[#3B41C5] h-full rounded-full" style="width: 75%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-semibold text-[#111111]">스페인어 (Spanish)</span>
+                                <span class="text-[#3B41C5] font-bold">Siele B1</span>
+                            </div>
+                            <div class="w-full bg-neutral-100 h-2 rounded-full overflow-hidden"><div class="bg-[#3B41C5] h-full rounded-full" style="width: 60%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Keywords / Tools -->
+                <div class="bg-white p-8 rounded-2xl shadow-card border border-neutral-100 space-y-6">
+                    <h3 class="text-lg font-bold text-[#111111] pb-3 border-b border-neutral-100">핵심 키워드 및 업무 툴</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-neutral-100 text-[#111111]">E-Commerce Sourcing</span>
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-neutral-100 text-[#111111]">VIP User Management</span>
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-neutral-100 text-[#111111]">Data-Driven Marketing</span>
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-neutral-100 text-[#111111]">Cross-Cultural Communication</span>
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-neutral-100 text-[#111111]">Excel & Data Analytics</span>
+                        <span class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-neutral-100 text-[#111111]">SNS Live Commerce Operation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ⑦ Contact Section -->
+        <section id="contact" class="py-20 reveal">
+            <div class="bg-[#111111] text-white rounded-3xl p-10 sm:p-16 relative overflow-hidden shadow-2xl">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#3B41C5]/30 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="max-w-2xl relative z-10 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-[#3B41C5] mb-2 block">Get In Touch</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">함께 시너지를 만들 준비가 되어 있습니다.</h2>
+                        <p class="text-neutral-400 mt-3 text-sm sm:text-base leading-relaxed">
+                            역량 있는 조직에서 글로벌 비즈니스와 유저 성장을 이끌어갈 기회를 기다립니다. 언제든 편하게 연락 주시기 바랍니다.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Phone -->
+                        <div onclick="copyToClipboard('010-6578-1885', '전화번호')" class="bg-neutral-900/80 border border-neutral-800 p-5 rounded-2xl cursor-pointer hover:border-[#3B41C5] transition-all group">
+                            <span class="text-xs text-neutral-400 block mb-1">연락처 (Phone) — 클릭시 복사</span>
+                            <span class="text-lg font-bold text-white group-hover:text-[#3B41C5] transition-colors">010-6578-1885</span>
+                        </div>
+                        <!-- Email -->
+                        <div onclick="copyToClipboard('cheeselin@naver.com', '이메일')" class="bg-neutral-900/80 border border-neutral-800 p-5 rounded-2xl cursor-pointer hover:border-[#3B41C5] transition-all group">
+                            <span class="text-xs text-neutral-400 block mb-1">이메일 (E-Mail) — 클릭시 복사</span>
+                            <span class="text-lg font-bold text-white group-hover:text-[#3B41C5] transition-colors truncate block">cheeselin@naver.com</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-neutral-800 flex flex-wrap items-center justify-between gap-4 text-xs text-neutral-400">
+                        <span>비자 정보: 중국 국籍 / F-4 비자 (합법적 국내 상시 근무 가능)</span>
+                        <span>© 2026 Dayeon Lim. All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-8 right-8 bg-[#111111] text-white px-5 py-3 rounded-xl shadow-2xl text-sm font-medium transform translate-y-20 opacity-0 transition-all duration-300 z-50 border border-neutral-800">
+        복사되었습니다!
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Scroll Reveal Animation observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Accordion Toggle for Projects (STAR)
+        function toggleAccordion(header) {
+            const card = header.closest('.project-card');
+            const content = card.querySelector('.accordion-content');
+            const arrow = card.querySelector('.accordion-arrow');
+
+            // Close others if needed, or toggle current
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+            // Close all first
+            document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
+            document.querySelectorAll('.accordion-arrow').forEach(a => a.style.transform = 'rotate(0deg)');
+
+            if (!isOpen) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Project Category Filter
+        function filterProjects(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-[#3B41C5]', 'text-white');
+                btn.classList.add('bg-white', 'text-[#666666]', 'border', 'border-neutral-200');
+            });
+            event.target.classList.remove('bg-white', 'text-[#666666]', 'border', 'border-neutral-200');
+            event.target.classList.add('bg-[#3B41C5]', 'text-white');
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Copy to clipboard helper
+        function copyToClipboard(text, label) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(`${label} (${text})가 클립보드에 복사되었습니다.`);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
+```[cite: 1, 2]
+
+```
